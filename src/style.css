@@ -1,0 +1,57 @@
+main {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+#score {
+  width: 250px;
+  padding: 16px;
+}
+
+#score-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#score-table {
+  border: solid #000 2px;
+  border-radius: 8px;
+  padding: 6px;
+}
+
+#score-table p:nth-child(even) {
+  background-color: #c4b9b9;
+  padding: 6px;
+}
+
+#add-score {
+  margin-top: 12px
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+input {
+  border-radius: 8px;
+  padding: 8px;
+}
+
+#refresh {
+  background-color: #5db883;
+  padding: 8px;
+  border-radius: 8px;
+  color: #fff;
+}
+
+#btn-add {
+  background-color: #2140a7;
+  padding: 8px;
+  border-radius: 8px;
+  color: #fff;
+}
