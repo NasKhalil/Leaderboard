@@ -1,6 +1,5 @@
-import _ from 'lodash';
 import './style.css';
-import data from './data';
+import data from './data.js';
 
 const scoreTable = document.querySelector('#score-table');
 
@@ -12,6 +11,6 @@ const displayTable = () => {
     `;
   });
   scoreTable.innerHTML = htmlCode;
-}
+};
 
 displayTable();
