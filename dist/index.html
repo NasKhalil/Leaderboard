@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+<script defer src="main.js"></script></head>
+<body>
+    <h1>Leaderboard</h1>
+    <main>
+        <section id="score">
+            <div id="score-title">
+                <h3>Recent scores</h3>
+                <button type="button" id="refresh">Refresh</button>
+            </div>
+            <div id="score-table"></div>
+        </section>
+        <section id="add-score">
+            <h3>Add your score</h3>
+            <form action="submit">
+                <input type="text" name="name" id="input-name">
+                <input type="number" name="score" id="input-score">
+                <button type="submit" id="btn-add">Submit</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
