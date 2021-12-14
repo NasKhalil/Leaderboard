@@ -2,20 +2,20 @@ const newGame = () => {
   fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/', {
     method: 'POST',
     body: JSON.stringify({
-      name: 'Codm'
+      name: 'Codm',
     }),
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
     },
-});
+  });
 };
 
 const sendScore = (user, score) => {
   fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/eQUcQ5gi4JK5SLh8JJKd/scores/', {
     method: 'POST',
     body: JSON.stringify({
-      'user': user,
-      'score': score
+      user,
+      score,
     }),
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
