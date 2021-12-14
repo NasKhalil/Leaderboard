@@ -20,12 +20,12 @@ const sendScore = (user, score) => {
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
     },
-});
+  });
 };
 
 const getScore = async () => {
   const data = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/eQUcQ5gi4JK5SLh8JJKd/scores/')
-  .then((res) => res.json());
+    .then((res) => res.json());
   return data;
 };
 
