@@ -1,5 +1,5 @@
 import './style.css';
-import { newGame, sendScore, getScore } from './api';
+import { newGame, sendScore, getScore } from './api.js';
 
 const scoreTable = document.querySelector('#score-table');
 const addScoreBtn = document.querySelector('#btn-add');
