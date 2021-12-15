@@ -10,9 +10,10 @@ const refrechBtn = document.getElementById('refresh');
 const displayTable = async () => {
   const data = await getScore();
   let htmlCode = '';
-  data.result.forEach((item) => {
+  data.result.sort((a, b) => b.score - a.score);
+  data.result.forEach((item, key) => {
     htmlCode += `
-      <p>${item.user}: ${item.score}</p>
+      <p>${key += 1} - ${item.user}: ${item.score}</p>
     `;
   });
   scoreTable.innerHTML = htmlCode;

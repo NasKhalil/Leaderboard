@@ -1,12 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+body {
+  margin: 60px;
+  background: linear-gradient(0deg, #000, #272727);
+  color: #c5c5b7;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
 main {
   display: flex;
   justify-content: center;
-  gap: 32px;
+  gap: 62px;
+  font-family: 'Concert One', cursive;
+  flex-wrap: wrap-reverse;
+}
+
+h1 {
+  font-family: 'Black Ops One', cursive;
+  font-size: 48px;
 }
 
 #score {
+  position: relative;
   width: 250px;
   padding: 16px;
+  background: linear-gradient(0deg, #000, #272727);
+}
+
+#score:before, #score:after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+    #0000ff, #00ff00,#ffff00, #ff0000);
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: steam 20s linear infinite;
+}
+
+.block:after {
+  filter: blur(50px);
 }
 
 #score-title {
@@ -22,7 +60,7 @@ main {
 }
 
 #score-table p:nth-child(even) {
-  background-color: #c4b9b9;
+  background-color: #42423e;
   padding: 6px;
 }
 
@@ -40,18 +78,47 @@ form {
 input {
   border-radius: 8px;
   padding: 8px;
+  border: #000 solid 2px;
+}
+
+input::placeholder {
+  color: #272727;
 }
 
 #refresh {
   background-color: #5db883;
   padding: 8px;
-  border-radius: 8px;
+  border-radius: 8px 8px 8px 0;
+  border: solid #5db883 2px;
   color: #fff;
+  cursor: pointer;
+}
+
+#refresh:hover {
+  background-color: #24c466;
 }
 
 #btn-add {
   background-color: #2140a7;
   padding: 8px;
-  border-radius: 8px;
+  border-radius: 8px 8px 8px 0;
+  border: solid #2140a7 2px;
   color: #fff;
+  cursor: pointer;
+}
+
+#btn-add:hover {
+  background-color: #0c31ad;
+}
+
+@keyframes steam {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
